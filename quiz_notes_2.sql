@@ -98,7 +98,13 @@ SELECT count(DISTINCT id) FROM (
         fruit_b LIKE '%A%'
 ) t;
 
-SELECT 'Apple' UNION SELECT 'Orange';
+SELECT count(*) FROM (
+    SELECT 'Apple' UNION SELECT 'Orange'
+) t;
+
+SELECT count(*) FORM (
+    SELECT 'Apple' UNION SELECT 'Apple'
+) t;
 
 -- INTERSECT ALL returns all rows that are in both queries
 -- INTERSECT also removes duplicates
