@@ -166,6 +166,10 @@ SELECT count(*) FROM (
     SELECT NULL
 ) t;
 
+-- NOTE:
+-- sqlite3 does not support INTERSECT ALL or EXCEPT ALL
+-- postgres supports all set operations
+
 -- The IN operator lets you compare to a "list"
 -- See: <https://www.postgresql.org/docs/15/functions-comparisons.html#FUNCTIONS-COMPARISONS-IN-SCALAR>
 /*
